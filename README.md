@@ -14,7 +14,7 @@ python3 + flask + gunicorn (fastes way to replace server header tag)
 ## how to install
 
 ```sh
-git clone https://github.com/joda32/owa-honeypot.git
+git clone https://github.com/vinsiic/owa-honeypot.git
 cd owa-honeypot
 python3 -m venv env
 source env/bin/activate
