@@ -9,7 +9,7 @@ This is a basic Python3 Flask based Outlook Web Honey pot, but given some minor 
 There is always some pesky people who try to do some _bad_ authorization things to corp OWA.
 
 ## requirements
-python3 + flask + gunicorn (fastes way to replace server header tag)
+python3 + flask + gunicorn (fastest way to replace server header tag)
 
 ## how to install
 
@@ -25,6 +25,18 @@ pip install -r requirements.txt
 
 gunicorn -c gunicorn.conf.py owa_pot:app
 ```
+
+I included simple `Dockerfile` so it would be easer to run it as container.
+
+```sh
+# Build image
+docker build -t owa-pot .
+
+# Run image, that will be binded to localhost 1337 port
+docker run -d --name owa-pot -p 127.0.0.1:1337:1337 owa-pot
+```
+
+Usually I use this container and run in conjunction with [Caddy](https://caddyserver.com/).
 
 ## screens
 

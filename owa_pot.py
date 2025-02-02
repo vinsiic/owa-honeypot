@@ -236,7 +236,7 @@ def create_app(test_config=None):
 app = create_app()
 
 if __name__ == '__main__':
-  host = os.getenv("HOST", "0.0.0.0")
+  host = os.getenv("HOST", "127.0.0.1")
   port = int(os.getenv("PORT", 1337))
   debug = os.getenv("DEBUG", "False").lower() in ["true", "1", "yes"]
   app.run(debug=debug, port=port, host=host)
